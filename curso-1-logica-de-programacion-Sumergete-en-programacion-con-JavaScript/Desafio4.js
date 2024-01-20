@@ -60,10 +60,10 @@ let numeroAleatorio = Math.random();
 console.log(numeroAleatorio);
 
 //12 Utiliza Math.random para generar un número entero entre 1 y 10 y muestra ese número en la consola.
-let numeroAleatorioEntero = Math.floor(Math.random()*10);
+let numeroAleatorioEntero = Math.floor(Math.random()*10)+1;
 console.log(numeroAleatorioEntero);
 
 //13 Utiliza Math.random para generar un número entero entre 1 y 1000 y muestra ese número en la consola.
 
-let numeroAleatorioEnteroMil= Math.floor(Math.random()*1000);
+let numeroAleatorioEnteroMil= Math.floor(Math.random()*1000)+1;
 console.log(numeroAleatorioEnteroMil);
