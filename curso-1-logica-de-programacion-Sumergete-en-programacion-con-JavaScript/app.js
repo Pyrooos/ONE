@@ -1,13 +1,14 @@
 //Variables
+let numeroMaximoPosible=100
 let numeroSecreto=Math.floor(Math.random()*10)+1;
 let numeroUsuario=0;
 let intentos = 1;
-let maximosIntentos=3;
+let maximosIntentos=5;
 //se utiliza para ver en consola el numero y agilizar el proceso de aprendizaje, no es necesario implementar en una version final
 console.log(numeroSecreto)
 
 while (numeroSecreto != numeroUsuario){
-    let numeroUsuario = parseInt(prompt("Me indicas un numero entre el 0 y 10 por favor:"));
+    let numeroUsuario = parseInt(prompt(`Me indicas un numero entre el 0 y ${numeroMaximoPosible} por favor:`));
     console.log(numeroUsuario);
 
 //aqui se realiza la comparación
