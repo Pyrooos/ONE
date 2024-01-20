@@ -3,13 +3,14 @@ let numeroSecreto=Math.floor(Math.random()*10)+1;
 let numeroUsuario=0;
 let intentos = 1;
 let maximosIntentos=3;
-
+//se utiliza para ver en consola el numero y agilizar el proceso de aprendizaje, no es necesario implementar en una version final
 console.log(numeroSecreto)
+
 while (numeroSecreto != numeroUsuario){
-    let numeroUsuario = prompt("Me indicas un numero entre el 0 y 10 por favor:");
+    let numeroUsuario = parseInt(prompt("Me indicas un numero entre el 0 y 10 por favor:"));
     console.log(numeroUsuario);
 
-    //aqui se realiza la comparación
+//aqui se realiza la comparación
     if (numeroUsuario == numeroSecreto){
         alert(`Acertaste, el numero es: ${numeroUsuario}. Lo hiciste en ${intentos} ${intentos == 1 ? 'intento':'intentos' }`);
         break;
