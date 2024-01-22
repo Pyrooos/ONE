@@ -2,7 +2,7 @@
 
 //2
 let horaDelDesafio = document.querySelector("h1");
-titulo.innerHTML("Hora del desafío");
+horaDelDesafio.innerHTML='Hora del desafío';
 
 //3
 function clickConsole(){
@@ -14,11 +14,12 @@ function ciudad(){
     nombreCiudad= prompt("Nombra una ciudad de Brasil");
     alert(`Estuve en ${nombreCiudad} y me acordé de ti`);
 }
+//5
 function ilove(){
     alert("Yo amo JS");
 }
 
-//5
+//6
 function suma(){
     primerDigito=parseInt(prompt("Por favor ingresa el primer digito para una suma"));
     segundoDigito=parseInt(prompt("Introduce el segundo digito"));
