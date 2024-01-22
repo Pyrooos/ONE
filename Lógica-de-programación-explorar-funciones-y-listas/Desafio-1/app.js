@@ -18,6 +18,7 @@ function ilove(){
     alert("Yo amo JS");
 }
 
+//5
 function suma(){
     primerDigito=parseInt(prompt("Por favor ingresa el primer digito para una suma"));
     segundoDigito=parseInt(prompt("Introduce el segundo digito"));
