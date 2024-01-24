@@ -12,7 +12,17 @@ function verificarIntento(){
     let numeroDeUsuario = parseInt(document.getElementById('valorUsuario').value);
     console.log(numeroSecreto);
     console.log(numeroDeUsuario);
-    console.log(numeroDeUsuario === numeroSecreto);
+
+    if (numeroDeUsuario === numeroSecreto){
+        asignarTextoElemento('p', 'Acertaste el numero')
+    }else {
+        if (numeroDeUsuario < numeroSecreto) {
+        asignarTextoElemento("p", "El número es mayor")  
+        }else {
+            asignarTextoElemento("p", "El número es menor")
+        } 
+        
+    }
     return;
 }
 
