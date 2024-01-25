@@ -12,7 +12,7 @@ function asignarTextoElemento(elemento, texto){
 function verificarIntento(){
     let numeroDeUsuario = parseInt(document.getElementById('valorUsuario').value);
     
-    
+    console.log(`numero de secreto :${numeroSecreto}`);
     console.log(`numero de usuario :${numeroDeUsuario}`);
     console.log(`numero de intentos: ${contadorIntentos}`);
     console.log(`Numero Maximo de intentos ${numeroMaximoDeIntentos}`)
@@ -39,16 +39,11 @@ function verificarIntento(){
         }break;      
     }               
 }
-        
-            
-    
-        
-    
 
 function condicionesIniciales(){
     
     asignarTextoElemento('h1', "Juego del numero secreto");
-    asignarTextoElemento('p', "Indica un número del 1 al 10, solo tienes ");
+    asignarTextoElemento('p', `Indica un número del 1 al 10, solo tienes ${numeroMaximoDeIntentos} intentos`);
     numeroSecreto = generarNumeroSecreto();
     contadorIntentos = 1;
     
@@ -59,10 +54,10 @@ function limpiarCaja(){
 
 function generarNumeroSecreto() {
     
-    let numeroGenerado = parseInt(Math.floor(Math.random()*10)+1); 
+    let numeroGenerado = Math.floor(Math.random()*10)+1; 
     
     if (listaNumerosSorteados.includes(numeroGenerado)){
-        return generarNumeroSecreto;
+        return generarNumeroSecreto();
     } else { 
         listaNumerosSorteados.push(numeroGenerado)
         return numeroGenerado;
