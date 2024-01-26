@@ -52,10 +52,41 @@ function sumaLista(listaNumeros){
     let suma = 0;
     for (let i=0; i < listaNumeros.length; i++ ){
         suma += listaNumeros[i];
-        
-    }return suma
+    }
+    return suma
 }
 console.log(sumaLista([1,5,2,62,1,1]));
 //9 Crea una función que devuelva la posición en la lista donde se encuentra un elemento pasado como parámetro, o -1 si no existe en la lista.
+function encontrarPosicion(listaNumeros, numero){
+    let posición = listaNumeros.indexOf(numero)
+    if (posición !== -1){
+        console.log(`el elmento buscado ${numero} se encuentra en la posicion ${posición}`)
+    } else {
+        console.log(`el numero ${numero} no se encuentra en la lista`)
+    }
+    return posición
+    
+}
+encontrarPosicion([3,11,55,22,6,32,21], 4);
 //10 Crea una función que reciba dos listas de números del mismo tamaño y devuelva una nueva lista con la suma de los elementos uno a uno.
+function sumaDeListas(lista1, lista2){
+    if (lista1.length !== lista2.length){
+        console.log('Las listas no son del mismo tamaño')
+        return null
+    } else {
+        let resultado = [];
+        for (i=0; i<lista1.length; i++){
+            resultado.push(lista1[i]+lista2[i]);
+        }return resultado
+    }
+}
+console.log(sumaDeListas([1, 3], [3, 1]));
 //11 Crea una función que reciba una lista de números y devuelva una nueva lista con el cuadrado de cada número.
+function sumaDeListas(lista){
+    let resultado = [];
+        for (i=0; i<lista.length; i++){
+            resultado.push(lista[i]*lista[i]);
+        }return resultado
+    }
+
+console.log(sumaDeListas([3, 5]));
