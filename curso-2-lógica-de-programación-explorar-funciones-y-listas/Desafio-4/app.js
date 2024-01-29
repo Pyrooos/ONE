@@ -81,6 +81,7 @@ function sumaDeListas(lista1, lista2){
     }
 }
 console.log(sumaDeListas([1, 3], [3, 1]));
+
 //11 Crea una función que reciba una lista de números y devuelva una nueva lista con el cuadrado de cada número.
 function sumaDeListas(lista){
     let resultado = [];
@@ -88,5 +89,4 @@ function sumaDeListas(lista){
             resultado.push(lista[i]*lista[i]);
         }return resultado
     }
-
 console.log(sumaDeListas([3, 5]));
