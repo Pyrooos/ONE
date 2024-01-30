@@ -1,13 +1,29 @@
-p{
-    text-align: center;
-    text-decoration-color: #FDFBF6;
-    
-}
 body{
     background: #000000;
     color: #FDFBF6;
 }
 
+h1{
+    border: 10px solid #ffffff;
+    text-align: center;
+    padding: 30px;
+    height: 50px;
+    margin: 40px;
+    }
+
+
+p{
+    text-align: center;
+    text-decoration-color: #FDFBF6;
+    
+}
+
+
+
 em strong{
     color: red;
+}
+
+#mision{
+    font-size : 20px;
 }
