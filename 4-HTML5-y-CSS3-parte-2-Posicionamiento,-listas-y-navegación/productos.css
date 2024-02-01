@@ -39,15 +39,24 @@ nav a{
     padding: 50px;
 }
 .productos li{
-    display: inline-block;
+    display: inline-table;
     text-align: center;
-    width: 30%;
-    vertical-align: top;
+    width: 20%;
+    vertical-align: middle;
     margin: 0 1.5%;
-    padding: 30px 20px;
+    padding: 30px 10px  ;
     box-sizing: border-box;
-
+    border-color: #ffffff;
+    border-width: 2px;
+    border-style: solid;
+    border: 2px solid white;
+    border-radius:30px;
 }
+
+.productos li img {
+        display: block; /* Hace que la imagen sea un bloque para aplicar márgenes automáticos */
+        margin: 0 auto; /* Centra la imagen horizontalmente */
+    }
 .productos h2{
     font-size: 30px;
     font-weight: bold;
