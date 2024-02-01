@@ -1,6 +1,6 @@
 
 header{
-    background-color: #ececec;
+    background-color: #a1a1a1;
     padding: 20px 0;
 }
 body{
@@ -54,15 +54,12 @@ nav a:hover{
     border-radius: 30px;
 }
 .productos li:hover{
-    border-color: crimson;
-    
-    
+    border-color: crimson;   
 }
 .productos li:active{
     border-color: aqua;
 }
 .productos li img {
-   
     border-radius: 60px;
 }
 .productos h2{
@@ -82,3 +79,9 @@ nav a:hover{
     font-weight: bold ;
 }
 
+footer{
+    color: white;
+    text-align: center;
+    background: url(imagenes/bg.jpg) ;
+    padding: 40px;
+}
