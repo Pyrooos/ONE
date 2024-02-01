@@ -1,0 +1,99 @@
+
+header{
+    background-color: #1D201F;
+    padding: 20px 0;
+}
+body{
+    background: #000000;
+    color: #ffffff;
+    
+}
+.caja{
+    width: 940px;
+    position: relative;
+    margin: 0 auto;
+}
+
+nav {
+    position: absolute;
+    top:110px;
+    right: 0;
+
+}
+nav a{
+    color: #ffffff;
+}
+nav :visited{
+    color: #ffffff
+}
+
+nav li{
+    display: inline;
+    margin: 0 0 0 15px;
+}
+
+nav a{
+    text-transform: uppercase
+    color #000000;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+}
+nav a:hover{
+    color: crimson;
+    text-decoration: underline;
+}
+
+.productos{
+    width: 940px;
+    margin: 0 auto;
+    padding: 40px;
+}
+.productos li {
+    display: inline-table;
+    text-align: center;
+    width: 10%;
+    vertical-align: middle;
+    margin: 0 1.5%;
+    padding: 40px 10px; /* Ajusta el espacio entre el texto e imagen aquí */
+    box-sizing: border-box;
+    border: 2px solid white;
+    border-radius: 30px;
+}
+.productos li:hover{
+    border-color: crimson;   
+}
+.productos li:active{
+    border-color: aqua;
+}
+.productos li img {
+    border-radius: 60px;
+}
+.productos h2{
+    margin-top: 10px;
+    font-size: 30px;
+    font-weight: bold;
+}
+.productos li:hover h2{
+    font-size: 34px;
+}
+.productos-descripcion{
+    font-size: 18px;
+}
+
+.productos-precio{
+    font-size: 20px ;
+    font-weight: bold ;
+}
+
+footer{
+    
+    text-align: center;
+    background: url(imagenes/bg.jpg) ;
+    padding: 40px;
+}
+.Copyright{
+    color: white;
+    font-size: 13px;
+    margin: 20px;
+}
