@@ -138,3 +138,17 @@ form label,form legend{
     background: rgba(223, 123, 2, 0.808);
     transform: scale(1.2);
 }
+table{
+    margin: 40px 40px;
+}
+thead{
+    background-color: #ffffff;
+    color:rgb(0, 0, 0);
+    font-weight: 1px solid;
+}
+
+td, th{ 
+    border: 1px solid rgb(255, 255, 255);
+    padding: 8px 15px;
+
+}
