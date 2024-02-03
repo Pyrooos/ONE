@@ -1,12 +1,17 @@
 
-header {
-    background-color: #1D201F;
-    padding: 20px 0;
-}
 body{
     background: #1D201F;
     color: #ffffff;
+    font-family: 'Philosopher', sans-serif;
+    
 }
+header {
+    font-family: 'Great Vibes', cursive;
+    background-color: #1D201F;
+    padding: 20px 0;
+    
+}
+
 
 .caja{
     width: 940px;
@@ -27,6 +32,7 @@ nav ul {
 }
 nav a{
     color: #ffffff;
+    font-size: 35px;
 }
 nav :visited{
     color: #ffffff
@@ -41,7 +47,6 @@ nav a{
     text-transform: uppercase
     color #000000;
     font-weight: bold;
-    font-size: 22px;
     text-decoration: none;
 }
 nav a:hover{
@@ -77,6 +82,7 @@ nav a:hover{
     text-align: top;
     margin: 2em 0 1em;
     text-decoration-color: #FDFBF6;
+    font-family: 'Philosopher', sans-serif;
     
 }
 

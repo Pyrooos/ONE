@@ -1,13 +1,14 @@
-
-header{
-    background-color: #1D201F;
-    padding: 20px 0;
-}
 body{
     background: #000000;
     color: #ffffff;
-    
+    font-family: 'Philosopher', sans-serif;
 }
+header{
+    font-family: 'Great Vibes', cursive;
+    background-color: #1D201F;
+    padding: 20px 0;
+}
+
 .caja{
     width: 940px;
     position: relative;
@@ -36,7 +37,7 @@ nav a{
     text-transform: uppercase
     color #000000;
     font-weight: bold;
-    font-size: 22px;
+    font-size: 35px;
     text-decoration: none;
 }
 nav a:hover{
@@ -55,7 +56,7 @@ nav a:hover{
     width: 10%;
     vertical-align: middle;
     margin: 0 1.5%;
-    padding: 40px 10px; /* Ajusta el espacio entre el texto e imagen aquí */
+    padding: 40px 10px; 
     box-sizing: border-box;
     border: 2px solid white;
     border-radius: 30px;
