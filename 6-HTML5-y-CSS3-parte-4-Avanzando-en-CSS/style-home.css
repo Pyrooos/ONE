@@ -57,19 +57,20 @@ nav a:hover{
 .principal{
 
     background: #414040;
-    padding: 20px;
+    padding: 2em 0 2em;
     font-size: 20px
 }
-.titulo-centralizado{
+.titulo-principal{
     text-align: center;
-    font-size: 29px;
-    padding: 20px;
+    font-size: 2em;
+    margin: 0 0 2em;
     font-weight:bolder;
 }
 
 
-p{
+.principal p{
     text-align: top;
+    margin: 2em 0 1em;
     text-decoration-color: #FDFBF6;
     
 }
@@ -78,6 +79,7 @@ p{
 
 em strong{
     color: rgb(255, 230, 0);
+    font-weight:bolder;
 }
 
 #mision{
@@ -87,6 +89,7 @@ em strong{
 }
 
 .diferenciales{
+    text-align: center;
     background: #1D201F;
     padding: 40px;
     
