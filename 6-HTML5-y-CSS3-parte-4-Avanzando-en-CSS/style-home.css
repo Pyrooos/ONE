@@ -65,8 +65,13 @@ nav a:hover{
     font-size: 2em;
     margin: 0 0 2em;
     font-weight:bolder;
+    
 }
-
+.utensilios{
+    width: 260px;
+    float: left;
+    margin: 0 20px 0px ; 
+}
 
 .principal p{
     text-align: top;
@@ -77,9 +82,13 @@ nav a:hover{
 
 
 
-em strong{
+.principal strong{
     color: rgb(255, 230, 0);
     font-weight:bolder;
+}
+
+.principal strong{
+    font-style: italic;
 }
 
 #mision{
