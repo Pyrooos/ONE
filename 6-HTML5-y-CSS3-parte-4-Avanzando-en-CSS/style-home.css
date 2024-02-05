@@ -158,6 +158,15 @@ main{
 .imagen-diferenciales{
     width: 40%;
     border-radius: 40px;
+    transition: 2s all;
+    
+    
+}
+.imagen-diferenciales:hover{
+    width: 40%;
+    opacity: .5;
+    
+    
 }
 
 .video{
