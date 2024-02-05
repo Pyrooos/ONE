@@ -187,10 +187,19 @@ footer{
 .Copyright{
     color: white;
     font-size: 13px;
-    margin: 20px;
+    
 }
 @media screen and (max-width:480px){
-    body{
-        background: #000000;
+    h1{
+        text-align: center;
+    }
+    nav{
+        position: static;
+    }
+    .caja, .principal, .mapa-contenido, .contenido-diferenciales, .video {
+        width: auto;
+    }
+    .lista-diferenciales, .imagen-diferenciales{
+        width: 100%;
     }
 }
