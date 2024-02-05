@@ -158,9 +158,9 @@ main{
 .imagen-diferenciales{
     width: 40%;
     border-radius: 40px;
-    transition: 2s all;
+    transition: 1.5s all;
     opacity: .7;
-    box-shadow: 10px 10px 10px 10px black;
+    
     
     
 }
@@ -168,6 +168,7 @@ main{
     width: 40%;
     border-radius: 40px;
     opacity: 100;
+    box-shadow: 10px 10px 10px 10px black;
     
     
 }
@@ -187,4 +188,9 @@ footer{
     color: white;
     font-size: 13px;
     margin: 20px;
+}
+@media screen and (max-width:480px){
+    body{
+        background: #000000;
+    }
 }
