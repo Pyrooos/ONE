@@ -4,24 +4,24 @@ function codificador(parrafo) {
     let modificado = parrafo;
 
     if (parrafo.includes('a')) {
-        parrafo = modificado.replace(/a/g, 'ai');
+        modificado = modificado.replace(/a/g, 'ai');
     } 
 
-    if (parrafo.includes('e')) {
+    if (modificado.includes('e')) {
         
-        parrafo = modificado.replace(/e/g, 'enter');
+        modificado = modificado.replace(/e/g, 'enter');
     }
     if (parrafo.includes('i')){
-        parrafo = modificado.replace(/i/g, 'imes');
+        modificado = modificado.replace(/i/g, 'imes');
     }
     if (parrafo.includes('o')){
-        parrafo = modificado.replace(/o/g, 'ober');
+        modificado = modificado.replace(/o/g, 'ober');
     }
     
     if (parrafo.includes('u')){
-        parrafo = modificado.replace(/u/g, 'ufat');
+        modificado = modificado.replace(/u/g, 'ufat');
     }
-    return { original: parrafo, codificado: modificado };
+    return { mensajeOriginal: parrafo, mensajeCodificado: modificado };
 }
 
 
@@ -29,36 +29,32 @@ function codificador(parrafo) {
 function descodificador(parrafoCodificado) {
     let modificado = parrafoCodificado;
 
-    if (parrafoCodificado.includes('ufat')) {
-        modificado = modificado.replace(/ufat/g, 'u');
+    const reglasReemplazo = {
+        'ufat': 'u',
+        'ober': 'o',
+        'imes': 'i',
+        'enter': 'e',
+        'ai': 'a'
+    };
+
+    for (const clave in reglasReemplazo) {
+        if (parrafoCodificado.includes(clave)) {
+            modificado = modificado.replace(new RegExp(clave, 'g'), reglasReemplazo[clave]);
+        }
     }
 
-    if (parrafoCodificado.includes('ober')) {
-        modificado = modificado.replace(/ober/g, 'o');
-    }
-
-    if (parrafoCodificado.includes('imes')) {
-        modificado = modificado.replace(/imes/g, 'i');
-    }
-
-    if (parrafoCodificado.includes('enter')) {
-        modificado = modificado.replace(/enter/g, 'e');
-    }
-
-    if (parrafoCodificado.includes('ai')) {
-        modificado = modificado.replace(/ai/g, 'a');
-    }
-
-    return { original: modificado, codificado: parrafoCodificado };
+    return { mensajeDescodificado: modificado, mensajeCodificado: parrafoCodificado };
 }
+
+
 //hay que revisar la logica porque no esta codificando la primera parte
 
 
-var resultado = codificador('felicidades por enfrentar este desafio y haberlo concluido con exito!');
-console.log(resultado.codificado);
-console.log(resultado.original);
-var resultadoCodificacion = codificador('fenterlimescimesdaidenters poberr enternfrenterntair enterstenter dentersaifimesober y haibenterrlober cobernclufatimesdober cobern enterximestober!');
-console.log(resultadoCodificacion.codificado);
+var resultado = codificador('hola soy cristian mucho gusto');
+console.log('este es un mensaje codificado: \n', resultado.mensajeCodificado);
+console.log('este es un mensaje original: \n', resultado.mensajeOriginal);
+var resultadoDescodificacion = descodificador(resultado.mensajeCodificado);
+console.log('este es el mensaje ya decodificado: \n',resultadoDescodificacion.mensajeDescodificado)
+console.log('este es un mensaje codificado original: \n',resultadoDescodificacion.mensajeCodificado)
 
-var resultadoDescodificacion = descodificador(resultadoCodificacion.codificado);
-console.log(resultadoDescodificacion.original);
+
