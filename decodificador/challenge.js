@@ -1,7 +1,8 @@
 
 
 function codificador(parrafo) {
-    let modificado = parrafo;
+    let modificado = parrafo.toLowerCase();
+    
 
     if (parrafo.includes('a')) {
         modificado = modificado.replace(/a/g, 'ai');
@@ -27,7 +28,7 @@ function codificador(parrafo) {
 
 
 function descodificador(parrafoCodificado) {
-    let modificado = parrafoCodificado;
+    let modificado = parrafoCodificado.toLowerCase();
 
     const reglasReemplazo = {
         'ufat': 'u',
@@ -50,7 +51,7 @@ function descodificador(parrafoCodificado) {
 //hay que revisar la logica porque no esta codificando la primera parte
 
 
-var resultado = codificador('hola soy cristian mucho gusto');
+var resultado = codificador('Hola Soy Cristian Mucho GuSto');
 console.log('este es un mensaje codificado: \n', resultado.mensajeCodificado);
 console.log('este es un mensaje original: \n', resultado.mensajeOriginal);
 var resultadoDescodificacion = descodificador(resultado.mensajeCodificado);
