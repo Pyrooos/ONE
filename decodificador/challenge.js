@@ -1,7 +1,7 @@
 
 
 function codificador(parrafo) {
-    let modificado = parrafo.toLowerCase().replace(/[^a-zA-Z0-9\s]/g, '');
+    let modificado = parrafo.toLowerCase().replace(/[^a-z\s]/g, '');
     
     
 
@@ -29,9 +29,9 @@ function codificador(parrafo) {
 
 
 function descodificador(parrafoCodificado) {
-    let modificado = parrafoCodificado.toLowerCase().replace(/[^a-zA-Z0-9\s]/g, '');
+    let modificado = parrafoCodificado.toLowerCase().replace(/[^a-z\s]/g, '');
     const reglasReemplazo = {
-        [textoPermitido] : '',
+        
         'ufat': 'u',
         'ober': 'o',
         'imes': 'i',
