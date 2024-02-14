@@ -7,12 +7,38 @@
     <link rel="stylesheet" href="reset.css">
 </head>
 <body>
+    
     <header>
-        <div>
-            
+        <div class="logo">
+            <h1> <img src="imagenes/Logo.png"> </h1>
         </div>
     </header>
 
+    <main>
+
+        <section class="areaTexto">
+
+            <label for="texto"></label>
+            <input type="text" id="texto" class="input-padron" placeholder="Ingrese texto aqui">
+            
+            <div class="botones container__boton">
+                
+                <figcaption>Solo letras minúsculas y sin acentos</figcaption>
+                <button onclick="encriptar()" class="container__boton" > Encriptar</button>
+                <button onclick="desencriptar()" class="container__boton"disabled > Desencriptar</button>
+           
+            </div>
+
+        </section>
+
+        <section class="textoYaTrabajado">
+
+            <img id="imagenNoTexto" src="/decodificador/imagenes/Muñeco (1).png" alt="Imagen por defecto">
+            <p id="leyendaNoTexto" >Ningún mensaje fue encontrado. Ingrese un texto que desee encriptar o desencriptar.</p>
+        
+        </section>
     
+    </main>
+    <script src="challenge.js"></script>
 </body>
 </html>
