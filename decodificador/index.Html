@@ -21,6 +21,8 @@
             <label for="texto"></label>
             <input type="text" id="texto" class="input-padron" placeholder="Ingrese texto aqui">
             
+            <!-- <textarea id="textoInput" placeholder="Ingrese su texto aquí"></textarea>  -->
+            <!--revisar cual funciona mejor  -->
             <div class="botones container__boton">
                 
                 <figcaption>Solo letras minúsculas y sin acentos</figcaption>
@@ -31,15 +33,23 @@
 
         </section>
 
-        <section class="textoYaTrabajado">
+        <section class="sinTexto">
 
-            <img id="imagenNoTexto" src="/decodificador/imagenes/Muñeco (1).png" alt="Imagen por defecto">
-            <p id="leyendaNoTexto" >Ningún mensaje fue encontrado. </p>
-            <p id="leyendaNoTexto2" >Ingrese un texto que desee encriptar o desencriptar. </p>
+            <img class="imagenNoTexto" src="/decodificador/imagenes/Muñeco (1).png" alt="Imagen por defecto">
+            <p class="leyendaNoTexto" >Ningún mensaje fue encontrado. </p>
+            <p class="leyendaNoTexto2" >Ingrese un texto que desee encriptar o desencriptar. </p>
             
         </section>
-    
+        <section class="texto">
+            <div id="mensajeOutput"></div>
+        
+        <button onclick="copiarMensaje()">Copiar Mensaje</button>
+        </section>
     </main>
+    
+        <footer class="footer">
+            <p>Cristian Gutierrez 2024</p>
+        </footer>
     <script src="challenge.js"></script>
 </body>
 </html>
