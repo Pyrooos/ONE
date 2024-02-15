@@ -1,9 +1,8 @@
-function ocultarImagen(){
+function ocultarImagen() {
     var textoInput = document.getElementById('texto');
     var imagenNoTexto = document.getElementById('imagenNoTexto');
-    
-    if (textoInput.value.trim() !== '') {
 
+    if (textoInput.value.trim() !== '') {
         imagenNoTexto.style.display = 'none';
     } else {
         imagenNoTexto.style.display = 'block';
@@ -13,6 +12,7 @@ function ocultarImagen(){
 
 
 function encriptar(parrafo) {
+    let parrafo = document.getElementById('texto').value;
     let modificado = parrafo.toLowerCase().replace(/[^a-z\s]/g, '');
     
     
@@ -42,6 +42,7 @@ function encriptar(parrafo) {
 
 
 function desencriptar(parrafoCodificado) {
+    let parrafoCodificado = document.getElementById('mensajeOutput').innerText;
     let modificado = parrafoCodificado.toLowerCase().replace(/[^a-z\s]/g, '');
     const reglasReemplazo = {
         
