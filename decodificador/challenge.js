@@ -2,18 +2,32 @@ function ocultarImagen() {
     var textoInput = document.getElementById('texto');
     var imagenNoTexto = document.getElementById('imagenNoTexto');
 
-    if (textoInput.value.trim() !== '') {
-        imagenNoTexto.style.display = 'none';
-    } else {
+    if (textoInput.value.trim() === '' || /[0-9!@#$%^&*(),.?":{}|<>]/.test(textoInput.value)) {
         imagenNoTexto.style.display = 'block';
+    } else {
+        imagenNoTexto.style.display = 'none';
     }
 }
 
+function encriptar() {
+    textoInput = document.getElementById('texto').value;
+    var resultado = encriptarMensaje(textoInput);
+    document.getElementById('mensajeOutput').innerText = resultado.mensajeCodificado;
+    ocultarImagen();
+    // Habilitar el botón de desencriptar
+    document.querySelector('#desencriptar').removeAttribute('disabled')
+}
+function desencriptar(){
+    var textoOutput= document.getElementById('mensajeOutput').innerText;
+    var resultado = desencriptarMensaje(textoOutput);
+    document.getElementById('mensajeOutput').innerText = resultado.mensajeDescodificado;
+    ocultarImagen()
+}
 
 
-function encriptar(parrafo) {
-    let parrafo = document.getElementById('texto').value;
+function encriptarMensaje(parrafo) {
     let modificado = parrafo.toLowerCase().replace(/[^a-z\s]/g, '');
+
     
     
 
@@ -35,42 +49,54 @@ function encriptar(parrafo) {
     if (parrafo.includes('u')){
         modificado = modificado.replace(/u/g, 'ufat');
     }
-    ocultarImagen()
     return { mensajeOriginal: parrafo, mensajeCodificado: modificado };
 }  
-
-
-
-function desencriptar(parrafoCodificado) {
-    let parrafoCodificado = document.getElementById('mensajeOutput').innerText;
+function desencriptarMensaje(parrafoCodificado) {
+    
     let modificado = parrafoCodificado.toLowerCase().replace(/[^a-z\s]/g, '');
-    const reglasReemplazo = {
-        
-        'ufat': 'u',
-        'ober': 'o',
-        'imes': 'i',
-        'enter': 'e',
-        'ai': 'a'
-    };
-
-    for (const clave in reglasReemplazo) {
-        if (parrafoCodificado.includes(clave)) {
-            modificado = modificado.replace(new RegExp(clave, 'g'), reglasReemplazo[clave]);
-        }
+   
+    if (modificado.includes('ai')) {
+        modificado = modificado.replace(/ai/g, 'a');
     }
-    ocultarImagen();
+
+    if (modificado.includes('enter')) {
+        modificado = modificado.replace(/enter/g, 'e');
+    }
+
+    if (modificado.includes('imes')) {
+        modificado = modificado.replace(/imes/g, 'i');
+    }
+
+    if (modificado.includes('ober')) {
+        modificado = modificado.replace(/ober/g, 'o');
+    }
+
+    if (modificado.includes('ufat')) {
+        modificado = modificado.replace(/ufat/g, 'u');
+    }
+    
     return { mensajeDescodificado: modificado, mensajeCodificado: parrafoCodificado };
 }
+function copiarMensaje() {
+        
+        var elemento = document.getElementById('mensajeOutput');
+    
+        var rango = document.createRange();
+        rango.selectNode(elemento);
+        window.getSelection().removeAllRanges(); 
+        window.getSelection().addRange(rango);
+    
+        try {
+            document.execCommand('copy');
+            console.log('Texto copiado exitosamente');
+        } catch (err) {
+            console.error('Error al intentar copiar el texto', err);
+        }
+        window.getSelection().removeAllRanges();
+    }
+
+
 
 
 //hay que revisar la logica porque no esta codificando la primera parte
-
-
-var resultado = encriptar('Ho==la S=-=oy Cristian Mucho GuSto');
-console.log('este es un mensaje codificado: \n', resultado.mensajeCodificado);
-console.log('este es un mensaje original: \n', resultado.mensajeOriginal);
-var resultadoDescodificacion = desencriptar(resultado.mensajeCodificado);
-console.log('este es el mensaje ya decodificado: \n',resultadoDescodificacion.mensajeDescodificado)
-console.log('este es un mensaje codificado original: \n',resultadoDescodificacion.mensajeCodificado)
-
 

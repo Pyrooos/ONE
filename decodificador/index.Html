@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="reset.css">
 </head>
 <body>
-    
     <header>
         <div class="logo">
             <h1> <img src="imagenes/Logo.png"> </h1>
@@ -15,41 +14,31 @@
     </header>
 
     <main>
-
         <section class="areaTexto">
-
             <label for="texto"></label>
-            <input type="text" id="texto" class="input-padron" placeholder="Ingrese texto aqui">
-            
-            <!-- <textarea id="textoInput" placeholder="Ingrese su texto aquí"></textarea>  -->
-            <!--revisar cual funciona mejor  -->
+            <input type="text" id="texto" class="input-padron" placeholder="Ingrese texto aquí">
             <div class="botones container__boton">
-                
                 <figcaption>Solo letras minúsculas y sin acentos</figcaption>
-                <button onclick="encriptar()" class="container__boton" > Encriptar</button>
-                <button onclick="desencriptar()" class="container__boton"disabled > Desencriptar</button>
-           
+                <button onclick="encriptar()">Encriptar</button>
+                <button onclick="desencriptar()" id="desencriptar" disabled >Desencriptar</button>
             </div>
-
         </section>
 
         <section class="sinTexto">
-
-            <img id="imagenNoTexto" src="/decodificador/imagenes/Muñeco (1).png" alt="Imagen por defecto">
-            <p class="leyendaNoTexto" >Ningún mensaje fue encontrado. </p>
-            <p class="leyendaNoTexto2" >Ingrese un texto que desee encriptar o desencriptar. </p>
-            
+            <img id="imagenNoTexto" class="imagenNoTexto" src="/decodificador/imagenes/Muñeco (1).png" alt="Imagen por defecto">
+            <p class="leyendaNoTexto">Ningún mensaje fue encontrado.</p>
+            <p class="leyendaNoTexto2">Ingrese un texto que desee encriptar o desencriptar.</p>
         </section>
+        
         <section class="texto">
             <div id="mensajeOutput"></div>
-        
             <button onclick="copiarMensaje()">Copiar Mensaje</button>
         </section>
     </main>
     
-        <footer class="footer">
-            <p>Cristian Gutierrez 2024</p>
-        </footer>
+    <footer class="footer">
+        <p>Cristian Gutierrez 2024</p>
+    </footer>
     <script src="challenge.js"></script>
 </body>
 </html>
