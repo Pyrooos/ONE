@@ -6,6 +6,7 @@
     <title>Codificador - Decodificador</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
     <header>
@@ -16,8 +17,12 @@
 
     <main>
         <section class="areaTexto">
-            <label for="texto"></label>
-            <input type="text" id="texto" class="input-padron" placeholder="Ingrese texto aquí">
+
+            <div class="cajaDeTexto">
+                <label for="texto"></label>
+                <input type="text" id="texto" class="input-padron" placeholder="Ingrese texto aquí">
+            </div>
+
             <div class="botones container__boton">
                 <figcaption>Solo letras minúsculas y sin acentos</figcaption>
                 <button onclick="encriptar()">Encriptar</button>
