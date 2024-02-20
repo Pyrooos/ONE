@@ -1,0 +1,23 @@
+body{
+    background-color: #F3F5FC;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding: 2em 0 2em 2em;
+}
+
+.input-padron{
+    background-color: #F3F5FC;
+    border: none;
+    margin: 30px 50px 2em 15em 
+
+    
+}
+
+.sinTexto{
+    background-color: white;
+    display: inline-flex;
+    padding: 2em 2em 2em 8em;
+}
