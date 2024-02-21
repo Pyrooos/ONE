@@ -1,0 +1,26 @@
+body{
+    background-color: #F3F5FC;
+}
+header{
+    text-align: left;
+    padding: 40px;
+}
+main{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+.areaTexto{
+    width: 48%;
+}
+.sinTexto{
+    width: 48%;
+    
+}
+
+.footer{
+    display: inline-table;
+    vertical-align: middle;
+    text-align: center;
+    padding: 2em;
+}
