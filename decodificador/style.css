@@ -12,8 +12,46 @@ main{
 }
 .areaTexto{
     width: 48%;
+    padding: 0 0 0 20em;
+}
+
+.input-padron{
+    background-color: #F3F5FC;
+    width: 100%;
+    color : #6784A9;
+    text-shadow: 0 0 0 0;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #0A3871;
+    border: none;
+}
+.input-padron::placeholder{
+    color: #0A3871;
+    font-style: bold;
+    font-size: 32px;
+}
+
+.botones {
+    margin-top: 30em;  
+}
+
+.encriptar{
+    margin-top: 12px;
+    margin-right: 12px;
+    padding: 24px;
+    width: 328px;
+    border-radius: 24px;
+    background-color: #0A3871;
+    color: white;
+}
+.desencriptar{
+    margin-left: 12px;
+    padding: 24px;
+    width: 328px;
+    border-radius: 24px;
 }
 .sinTexto{
+    
     width: 48%;
     
 }
