@@ -1,4 +1,17 @@
+function ocultarBoton(){
+    var mensajeOutput = document.getElementById('mensajeOutput');
+    var botonCopiar = document.getElementById('botonCopiar');
 
+    // Verifica si hay texto en el área de salida
+    if (mensajeOutput.innerText.trim() !== '') {
+        botonCopiar.style.display = 'block';  // Muestra el botón
+    } else {
+        botonCopiar.style.display = 'none';   // Oculta el botón
+    }
+}
+function actualizarVisibilidadBoton(){
+    ocultarBoton()
+}
 function ocultarTexto(){
     var textoInput = document.getElementById('texto')
     var leyendaNoTexto = document.getElementById('leyendaNoTexto');
@@ -34,6 +47,7 @@ function encriptar() {
     document.getElementById('mensajeOutput').innerText = resultado.mensajeCodificado;
     ocultarImagen();
     ocultarTexto();
+    actualizarVisibilidadBoton()
     // Habilitar el botón de desencriptar
     document.querySelector('#desencriptar').removeAttribute('disabled')
 }
@@ -43,6 +57,7 @@ function desencriptar(){
     document.getElementById('mensajeOutput').innerText = resultado.mensajeDescodificado;
     ocultarImagen();
     ocultarTexto();
+    actualizarVisibilidadBoton()
 }
 
 
