@@ -2,21 +2,20 @@ function ocultarBoton(){
     var mensajeOutput = document.getElementById('mensajeOutput');
     var botonCopiar = document.getElementById('botonCopiar');
 
-    // Verifica si hay texto en el área de salida
     if (mensajeOutput.innerText.trim() !== '') {
-        botonCopiar.style.display = 'block';  // Muestra el botón
+        botonCopiar.style.display = 'block'; 
+        document.querySelector('#desencriptar').removeAttribute('disabled')
     } else {
-        botonCopiar.style.display = 'none';   // Oculta el botón
+        botonCopiar.style.display = 'none';   
     }
 }
-function actualizarVisibilidadBoton(){
-    ocultarBoton()
-}
+
 function ocultarTexto(){
     var textoInput = document.getElementById('texto')
     var leyendaNoTexto = document.getElementById('leyendaNoTexto');
     var leyendaNoTexto2 = document.getElementById('leyendaNoTexto2');
-        if (textoInput.value.trim()=== '' || /[0-9!@#$%^&*(),.?":{}|<>]/.test(textoInput.value)){
+
+        if (textoInput.value.trim()=== '' ){
             leyendaNoTexto.style.display = 'block';
             leyendaNoTexto2.style.display = 'block';
 
@@ -27,12 +26,11 @@ function ocultarTexto(){
     console.log('Función ocultarTexto ejecutada');
 }
 
-
 function ocultarImagen() {
     var textoInput = document.getElementById('texto');
     var imagenNoTexto = document.getElementById('imagenNoTexto');
 
-    if (textoInput.value.trim() === '' || /[0-9!@#$%^&*(),.?":{}|<>]/.test(textoInput.value)) {
+    if (textoInput.value.trim() === '' ) {
         imagenNoTexto.style.display = 'block';
     } else {
         imagenNoTexto.style.display = 'none';
@@ -40,53 +38,56 @@ function ocultarImagen() {
     console.log('Función ocultarImagen ejecutada');
 }
 
-
-function encriptar() {
-    textoInput = document.getElementById('texto').value;
-    var resultado = encriptarMensaje(textoInput);
-    document.getElementById('mensajeOutput').innerText = resultado.mensajeCodificado;
+function manejarEventos(){
+    ocultarBoton();
     ocultarImagen();
     ocultarTexto();
-    actualizarVisibilidadBoton()
-    // Habilitar el botón de desencriptar
-    document.querySelector('#desencriptar').removeAttribute('disabled')
+}
+
+function encriptar() {
+    var textoInput = document.getElementById('texto').value;
+    var resultado = encriptarMensaje(textoInput);
+
+    document.getElementById('mensajeOutput').innerText = resultado.mensajeCodificado;
+    manejarEventos();
+    
 }
 function desencriptar(){
     var textoOutput= document.getElementById('mensajeOutput').innerText;
     var resultado = desencriptarMensaje(textoOutput);
     document.getElementById('mensajeOutput').innerText = resultado.mensajeDescodificado;
-    ocultarImagen();
-    ocultarTexto();
-    actualizarVisibilidadBoton()
+    manejarEventos()
 }
 
 
-function encriptarMensaje(parrafo) {
-    let modificado = parrafo.toLowerCase().replace(/[^a-z\s]/g, '');
 
-    
-    
 
-    if (parrafo.includes('a')) {
-        modificado = modificado.replace(/a/g, 'ai');
-    } 
-
-    if (modificado.includes('e')) {
-        
-        modificado = modificado.replace(/e/g, 'enter');
-    }
-    if (parrafo.includes('i')){
-        modificado = modificado.replace(/i/g, 'imes');
-    }
-    if (parrafo.includes('o')){
-        modificado = modificado.replace(/o/g, 'ober');
-    }
+    function encriptarMensaje(parrafo) {
+        let modificado = parrafo.toLowerCase().replace(/[^a-z\s]/g, '');
     
-    if (parrafo.includes('u')){
-        modificado = modificado.replace(/u/g, 'ufat');
+        if (modificado.includes('a')) {
+            modificado = modificado.replace(/a/g, (_, index) => (index % 2 === 0 ? 'ai' : 'a'));
+        }
+    
+        if (modificado.includes('e')) {
+            modificado = modificado.replace(/e/g, (_, index) => (index % 4 === 0 ? 'enter' : 'e'));
+        }
+    
+        if (modificado.includes('i')) {
+            modificado = modificado.replace(/i/g, (_, index) => (index % 3 === 0 ? 'imes' : 'i'));
+        }
+    
+        if (modificado.includes('o')) {
+            modificado = modificado.replace(/o/g, (_, index) => (index % 4 === 0 ? 'ober' : 'o'));
+        }
+    
+        if (modificado.includes('u')) {
+            modificado = modificado.replace(/u/g, (_, index) => (index % 4 === 0 ? 'ufat' : 'u'));
+        }
+    
+        return { mensajeOriginal: parrafo, mensajeCodificado: modificado };
     }
-    return { mensajeOriginal: parrafo, mensajeCodificado: modificado };
-}  
+
 function desencriptarMensaje(parrafoCodificado) {
     
     let modificado = parrafoCodificado.toLowerCase().replace(/[^a-z\s]/g, '');

@@ -20,14 +20,23 @@
 
             <div class="cajaDeTexto">
                 <label for="texto"></label>
-                <input type="text" id="texto" class="input-padron" placeholder="Ingrese texto aquí">
+                <textarea type="text" id="texto" class="input-padron" placeholder="Ingrese texto aquí"></textarea>
             </div>
 
-            <div class="botones container__boton">
-                <figcaption>Solo letras minúsculas y sin acentos</figcaption>
-                <button class="encriptar" onclick="encriptar()" >Encriptar</button>
-                <button class="desencriptar" onclick="desencriptar()" id="desencriptar" disabled >Desencriptar</button>
+            <div class="container__boton">
+
+                <div class="simbolo-leyenda">
+                    <img class="exclamation-solid" src="imagenes/bi_exclamation-circle-fill.png"></img>
+                    <figcaption class="leyenda">Solo letras minúsculas y sin acentos</figcaption>
+                </div>
+
+                <div class="botones">
+                    <button class="encriptar" onclick="encriptar()">Encriptar</button>
+                    <button class="desencriptar" onclick="desencriptar()" id="desencriptar" disabled>Desencriptar</button>
+                </div>
+
             </div>
+
         </section>
 
         <section class="areaDerechaTexto">
@@ -41,7 +50,7 @@
                 </div>
             </div>
             <div class="conTexto">
-                <div id="mensajeOutput"></div>
+                <div class="mensajeOutput" id="mensajeOutput"></div>
                 <button id="botonCopiar" onclick="copiarMensaje()" style="display: none;">Copiar Mensaje</button>
             </div>
         </section>
