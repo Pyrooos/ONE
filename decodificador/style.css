@@ -49,15 +49,15 @@ textarea {
     outline: none;
 }
 .input-padron::-webkit-scrollbar {
-    width: 7px;               /* width of the entire scrollbar */
+    width: 5px;               
 }
 
 
 
 .input-padron::-webkit-scrollbar-thumb {
-    background-color: #1B467C;    /* color of the scroll thumb */
-    border-radius: 10px;       /* roundness of the scroll thumb */
-    border: 2px solid #495057;  /* creates padding around scroll thumb */
+    background-color: #1B467C;   
+    border-radius: 10px;       
+    border: 2px solid #495057;  
 }
 .container__boton {
     display: flex;
@@ -129,17 +129,7 @@ button.desencriptar:not([disabled]) {
     
 
 }
-.mensajeOutput::-webkit-scrollbar {
-    width: 7px;               /* width of the entire scrollbar */
-}
 
-
-
-.mensajeOutput::-webkit-scrollbar-thumb {
-    background-color: #1B467C;    /* color of the scroll thumb */
-    border-radius: 10px;       /* roundness of the scroll thumb */
-    border: 3px solid #495057;  /* creates padding around scroll thumb */
-}
 .imagenNoTexto{
     margin-top: 150px;
 }
@@ -162,6 +152,17 @@ button.desencriptar:not([disabled]) {
     max-height: 600px;
     font-size: 24px;
     color: #0A3871;
+    
+}
+.mensajeOutput::-webkit-scrollbar {
+    width: 5px;               
+
+}
+
+.mensajeOutput::-webkit-scrollbar-thumb {
+    background-color: #1B467C;    
+    border-radius: 10px;       
+    border: 2px solid #495057;  
 }
 .leyendaNoTexto{
     margin-top: 2em;
