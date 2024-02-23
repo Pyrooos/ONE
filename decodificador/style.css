@@ -17,7 +17,7 @@ main{
 .areaTexto{
     width: 60%;
     height: 100%;
-    margin: 0 20px 0 200px;
+    margin: 0 90px 0 200px;
     box-sizing: border-box;
 
 }
@@ -27,6 +27,10 @@ textarea {
     outline: none;
     width: 100%;
 
+}
+.cajaDeTexto{
+    width: 95%;
+    margin-left: auto;
 }
 
 .input-padron{
@@ -51,8 +55,6 @@ textarea {
 .input-padron::-webkit-scrollbar {
     width: 5px;               
 }
-
-
 
 .input-padron::-webkit-scrollbar-thumb {
     background-color: #1B467C;   
@@ -120,11 +122,11 @@ button.desencriptar:not([disabled]) {
     
     justify-content: center;
     align-items: center;
-    margin-top: -80px;
-    width: 360px;
-    height: 780px;
+    margin-top: -120px;
+    width: 400px;
+    height: 830px;
     background-color: white;
-    margin-right: 2em;
+    margin-right: 1em;
     border-radius: 32px;
     
 
@@ -138,11 +140,6 @@ button.desencriptar:not([disabled]) {
     height: 122px;
 }
 
-.exclamation-solid {
-    display: flex;    
-    width: 20px;
-
-}
 
 .mensajeOutput{
     justify-content: center;
@@ -151,7 +148,7 @@ button.desencriptar:not([disabled]) {
     overflow-x: hidden; 
     max-height: 600px;
     font-size: 24px;
-    color: #0A3871;
+    color: #495057;
     
 }
 .mensajeOutput::-webkit-scrollbar {
@@ -163,6 +160,24 @@ button.desencriptar:not([disabled]) {
     background-color: #1B467C;    
     border-radius: 10px;       
     border: 2px solid #495057;  
+}
+.botonCopiar{
+    
+    display: block;    
+    width: 336px;
+    height: 67px;
+    border-radius:24px ;
+    color:#0A3871;
+    background-color:white;
+    border-color:#1B467C ;
+    position: fixed;
+    bottom: 12%;
+    left: 87%;
+    transform: translateX(-47%);
+    
+    
+    
+    
 }
 .leyendaNoTexto{
     margin-top: 2em;
@@ -179,7 +194,10 @@ button.desencriptar:not([disabled]) {
 }
 .footer{
     display: flex;
-    justify-content: center;
-    margin-top: 2em;
     color: #1B467C;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    
 }
