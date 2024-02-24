@@ -1,3 +1,36 @@
+function ajustarEstilos() {
+    var textoInput = document.getElementById('texto');
+    var areaDerechaTexto = document.querySelector('.areaDerechaTexto');
+    var simboloLeyenda=document.querySelector('.simboloLeyenda');
+    var botones = document.querySelector('.botones');
+    var imagenNoTexto = document.getElementById('imagenNoTexto');
+    var mensajeOutput=document.getElementById('mensajeOutput');
+    var botonCopiar = document.getElementById('botonCopiar');
+    
+    // Verifica si el ancho de la ventana es menor o igual a 768px
+
+    if (window.innerWidth <= 768 & textoInput.value.trim()!= '') {
+        imagenNoTexto.style.display = 'none';
+        simboloLeyenda.style.marginTop = '43%';
+        // Ajusta el tamaño de areaDerechaTexto
+        areaDerechaTexto.style.height = '30%'; // O el porcentaje deseado
+        areaDerechaTexto.style.top = '79%';
+        areaDerechaTexto.style.maxHeight ='43%';
+        
+        mensajeOutput.style.top = '31%';
+        mensajeOutput.style.right = '1%';
+        mensajeOutput.style.width = '93%';
+        textoInput.style.maxHeight = '23%';
+
+        botonCopiar.style.height = '23%'
+        botonCopiar.style.width = '93%'
+        // Desplaza los botones
+        botones.style.marginTop = '-10%'; // O el margen deseado
+        console.log('ajustar estilo activado');
+        
+    } 
+    
+}
 function ocultarBoton(){
     var mensajeOutput = document.getElementById('mensajeOutput');
     var botonCopiar = document.getElementById('botonCopiar');
@@ -9,6 +42,7 @@ function ocultarBoton(){
         botonCopiar.style.display = 'none';   
     }
 }
+
 
 function ocultarTexto(){
     var textoInput = document.getElementById('texto')
@@ -42,6 +76,7 @@ function manejarEventos(){
     ocultarBoton();
     ocultarImagen();
     ocultarTexto();
+    ajustarEstilos()
 }
 
 function encriptar() {
@@ -131,7 +166,6 @@ function copiarMensaje() {
         }
         window.getSelection().removeAllRanges();
     }
-
 
 
 

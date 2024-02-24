@@ -1,6 +1,7 @@
 body{
     background-color: #F3F5FC;
     font-family: 'Inter', sans-serif;
+    
 
 }
 
@@ -26,14 +27,16 @@ textarea {
     border: none;
     outline: none;
     width: 100%;
+    
 
 }
 .cajaDeTexto{
     width: 95%;
     margin-left: auto;
+    
 }
 
-.input-padron{
+.inputPadron{
     background-color: #F3F5FC;
     width: 100%;
     height: 550px;
@@ -41,9 +44,10 @@ textarea {
     box-sizing: border-box;
     font-size: 32px;
     border: none;
+    background-color: transparent;
 }
 
-.input-padron::placeholder{
+.inputPadron::placeholder{
     color: #0A3871;
     font-style: bold;
     font-size: 32px;
@@ -51,12 +55,13 @@ textarea {
     resize: none;
     border: none;
     outline: none;
+    
 }
-.input-padron::-webkit-scrollbar {
+.inputPadron::-webkit-scrollbar {
     width: 5px;               
 }
 
-.input-padron::-webkit-scrollbar-thumb {
+.inputPadron::-webkit-scrollbar-thumb {
     background-color: #1B467C;   
     border-radius: 10px;       
     border: 2px solid #495057;  
@@ -65,15 +70,18 @@ textarea {
     display: flex;
     flex-direction: column; 
 }
-.simbolo-leyenda {
+.simboloLeyenda {
+    
     display: flex;
     flex-direction: row; 
     align-items: center; 
-    margin-top: 2em;
+    margin-top: 2%;
     padding-left: 2em; 
 }
 
 .exclamation-solid {
+    padding-left: 3%;
+    
     width: 20px;
     height: 20px;
     margin-right: 5px;
@@ -89,7 +97,8 @@ textarea {
 
 .botones {
     display: flex;
-    padding-left: 2em;
+    padding-top: 1%;
+    padding-left: 5%;
 
 }
 
@@ -133,7 +142,9 @@ button.desencriptar:not([disabled]) {
 }
 
 .imagenNoTexto{
-    margin-top: 150px;
+    margin-top: 35%;
+    margin-left: 10%;
+    display: block;
 }
 .mensejeSinTexto{
     width: 336px;
@@ -142,9 +153,12 @@ button.desencriptar:not([disabled]) {
 
 
 .mensajeOutput{
-    justify-content: center;
-    margin: -80px 0px 0 30px;
-    overflow-y: auto,hidden;
+    
+    width: 90%;
+    margin-top: -15%;
+    margin-left: 7%;
+    padding-right: 3%;
+    overflow-y: auto;
     overflow-x: hidden; 
     max-height: 600px;
     font-size: 24px;
@@ -153,41 +167,41 @@ button.desencriptar:not([disabled]) {
 }
 .mensajeOutput::-webkit-scrollbar {
     width: 5px;               
-
+    
 }
 
 .mensajeOutput::-webkit-scrollbar-thumb {
     background-color: #1B467C;    
     border-radius: 10px;       
     border: 2px solid #495057;  
+
 }
 .botonCopiar{
     
     display: block;    
-    width: 336px;
-    height: 67px;
+    width: 19%;
+    height: 7%;
     border-radius:24px ;
     color:#0A3871;
     background-color:white;
     border-color:#1B467C ;
     position: fixed;
-    bottom: 12%;
+    bottom: 13%;
     left: 87%;
     transform: translateX(-47%);
-    
-    
-    
-    
+
 }
 .leyendaNoTexto{
-    margin-top: 2em;
+    margin-top: 15%;
+    padding-left: 20%;
     text-align: center;
     font-style: bold;
     font-size: 24px;
     color: #343A40;
 }
 .leyendaNoTexto2{
-    margin-top: 40px ;
+    margin-top: 15%;
+    padding-left: 20%;
     text-align: center;
     font-size: 16px;
     color: #495057;
@@ -200,4 +214,109 @@ button.desencriptar:not([disabled]) {
     left: 50%;
     transform: translateX(-50%);
     
+}
+@media only screen and (max-width: 768px)  {
+    header {
+        margin-top: 5%; 
+        margin-left: -5%;
+
+    }
+
+    main {
+        padding: 5px; 
+        
+    }
+
+
+    .areaTexto {
+        display: flex;
+        position: fixed;
+        top: 20%;
+        right: 25%;
+    }
+    .inputPadron{
+        top: 23%;
+        display: flex;
+        position: fixed;
+        width: 700px;
+        max-width: 1100px;
+        height: 450px; 
+    }
+    .botones {
+        display: flex;
+        position: fixed;
+        top: 63%;
+        left: 0%;
+        margin-top: 11%;
+        margin-left: 0%;
+    
+    }
+    .simboloLeyenda {
+    
+        display: flex;
+        position: fixed;
+        flex-direction: row;
+        width: 100%; 
+        align-items: center; 
+        margin-top: 65%;
+        left: 1%; 
+    }
+    .areaDerechaTexto{
+    
+        display: flex;
+        color: #1B467C;
+        position: fixed;
+        width: 90%;
+        height: 12%;
+        bottom: 5%;
+        left: 1%;
+        transform: translateX(5%);
+    
+    }
+    .imagenNoTexto{
+        display: none;
+    }
+    .leyendaNoTexto{
+        color: black;
+        font-weight: 600;
+        display: flex;
+        position: fixed;
+        text-align:initial;
+        width: 120%;
+        right: -45%;
+        top: -55%;
+    }
+    .leyendaNoTexto2{
+        position: fixed;
+        text-align:initial;
+        width: 120%;
+        right: -45%;
+        top: -18%;
+    }
+    .mensajeOutput{
+        display: flex;
+        position: fixed;
+        width: 100%;
+        margin-top: -9%;
+        right: 0;
+        padding-right: 3%;
+        overflow-y: auto;
+        overflow-x: hidden; 
+        max-height: 100px;
+        font-size: 24px;
+        color: #495057;
+        
+    }
+    .botonCopiar{
+    
+        display: flex;    
+        width: 100%;
+        height: 60%;
+        position: fixed;
+        top: 65%;
+        left: 50%;
+        transform: translateX(-50%);
+    
+    }
+
 }
