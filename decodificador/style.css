@@ -42,6 +42,8 @@ textarea {
     height: 550px;
     color : #0A3871;
     box-sizing: border-box;
+    font-weight: 400;
+    line-height: 48px;
     font-size: 32px;
     border: none;
     background-color: transparent;
@@ -50,6 +52,8 @@ textarea {
 .inputPadron::placeholder{
     color: #0A3871;
     font-style: bold;
+    font-weight: 400;
+    line-height: 48px;
     font-size: 32px;
     overflow: hidden;
     resize: none;
@@ -133,7 +137,7 @@ button.desencriptar:not([disabled]) {
     align-items: center;
     margin-top: -120px;
     width: 400px;
-    height: 830px;
+    height: 944px;
     background-color: white;
     margin-right: 1em;
     border-radius: 32px;
@@ -199,7 +203,7 @@ button.desencriptar:not([disabled]) {
     padding-left: 20%;
     text-align: center;
     font-style: bold;
-    font-weight: 500;
+    font-weight: 700;
     font-size: 24px;
     color: #343A40;
 }
@@ -216,7 +220,7 @@ button.desencriptar:not([disabled]) {
     position: fixed;
     bottom: 0;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-60%);
     
 }
 @media only screen and (max-width: 768px)  {
@@ -322,6 +326,9 @@ button.desencriptar:not([disabled]) {
         transform: translateX(-50%);
     
     }
+    .footer{
+        left: 53%;
+    }
 
 }
 @media only screen and (max-width: 768px) and (max-height: 1384px) {
@@ -386,7 +393,8 @@ button.desencriptar:not([disabled]) {
     }
     .leyendaNoTexto{
         color: black;
-        font-weight: 600;
+        font-style: bold;
+        font-weight: 500;
         display: flex;
         position: fixed;
         text-align:initial;
@@ -425,6 +433,9 @@ button.desencriptar:not([disabled]) {
         left: 50%;
         transform: translateX(-50%);
     
+    }
+    .footer{
+        left: 53%;
     }
 
 }
