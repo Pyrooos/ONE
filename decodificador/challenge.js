@@ -7,28 +7,65 @@ function ajustarEstilos() {
     var mensajeOutput=document.getElementById('mensajeOutput');
     var botonCopiar = document.getElementById('botonCopiar');
     
-    // Verifica si el ancho de la ventana es menor o igual a 768px
+    
 
-    if (window.innerWidth <= 768 & textoInput.value.trim()!= '') {
+    if (window.innerWidth <= 768 & window.innerHeight <= 1174 & textoInput.value.trim()!= '') {
+        
         imagenNoTexto.style.display = 'none';
-        simboloLeyenda.style.marginTop = '43%';
-        // Ajusta el tamaño de areaDerechaTexto
-        areaDerechaTexto.style.height = '30%'; // O el porcentaje deseado
-        areaDerechaTexto.style.top = '79%';
-        areaDerechaTexto.style.maxHeight ='43%';
+
+        textoInput.style.maxHeight = '35%';
+        simboloLeyenda.style.marginTop = '61%';
+        botones.style.marginTop = '-1%'; 
+    
+        
+        
+
+        areaDerechaTexto.style.height = '30%'; 
+        areaDerechaTexto.style.top = '83%';
+        areaDerechaTexto.style.maxHeight ='25%';
         
         mensajeOutput.style.top = '31%';
         mensajeOutput.style.right = '1%';
         mensajeOutput.style.width = '93%';
-        textoInput.style.maxHeight = '23%';
+        mensajeOutput.style.maxHeight ='40%';
+        
 
         botonCopiar.style.height = '23%'
         botonCopiar.style.width = '93%'
-        // Desplaza los botones
-        botones.style.marginTop = '-10%'; // O el margen deseado
+    
+        
         console.log('ajustar estilo activado');
         
     } 
+
+    if (window.innerWidth <= 768 & window.innerHeight <= 1384 & textoInput.value.trim()!= '') {
+        
+        imagenNoTexto.style.display = 'none';
+
+        textoInput.style.maxHeight = '40%';
+        simboloLeyenda.style.marginTop = '74%';
+        botones.style.marginTop = '-7%'; 
+    
+        
+        
+
+        areaDerechaTexto.style.height = '33%'; 
+        areaDerechaTexto.style.top = '81%';
+        areaDerechaTexto.style.maxHeight ='25%';
+        
+        mensajeOutput.style.top = '31%';
+        mensajeOutput.style.right = '1%';
+        mensajeOutput.style.width = '93%';
+        mensajeOutput.style.maxHeight ='40%';
+        
+        botonCopiar.style.top = '73%'
+        botonCopiar.style.height = '21%'
+        botonCopiar.style.width = '94%'
+    
+        
+        console.log('ajustar estilo activado');
+        
+    }
     
 }
 function ocultarBoton(){
