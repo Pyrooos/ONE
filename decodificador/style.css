@@ -439,3 +439,131 @@ button.desencriptar:not([disabled]) {
     }
 
 }
+@media only screen and (max-width: 375px) and (max-height: 933px) {
+    header {
+        margin-top: -4%; 
+        margin-left: -17%;
+
+    }
+
+    main {
+        padding: 5px; 
+        
+    }
+    
+    .areaTexto {
+        display: flex;
+        position: fixed;
+        top: 20%;
+        right: 12%;
+        
+    }
+    .inputPadron{
+        top: 18%;
+        display: flex;
+        position: fixed;
+        width: 100%;
+        max-width: 400px;
+        height: 550px; 
+        
+    }
+    .botones {
+       
+        
+    
+    }
+    .encriptar{
+        display: flex;
+        position: fixed;
+        justify-content: center;
+        top: 56%;
+        left: 7%;
+    }
+    .desencriptar{
+        display: flex;
+        position: fixed;
+        justify-content: center;
+        top: 65%;
+        right: 6%;
+    }
+    .simboloLeyenda {
+    
+        display: flex;
+        position: fixed;
+        flex-direction: row;
+        width: 100%; 
+        align-items: center; 
+        margin-top: 82%;
+        left: -2%; 
+    }
+    .areaDerechaTexto{
+    
+        display: flex;
+        color: #1B467C;
+        position: fixed;
+        width: 85%;
+        height: 19%;
+        bottom: 5%;
+        left: 3%;
+        transform: translateX(5%);
+    
+    }
+    .mensajeSinTexto{
+        text-align: justify;
+        float:inline-end;
+    }
+    .imagenNoTexto{
+        display: none;
+    }
+    .leyendaNoTexto{
+        color: black;
+        font-style: bold;
+        font-weight: 500;
+        display: flex;
+        position: fixed;
+        text-align: center;
+        justify-content:center;
+        width: 100%;
+        right: -2%;
+        top: -5%;
+        
+    }
+    .leyendaNoTexto2{
+        position: fixed;
+        text-align:initial;
+        width: 100%;
+        text-align: center;
+        justify-content:center;
+        right: 0%;
+        top: 29%;
+    }
+    .mensajeOutput{
+        display: flex;
+        position: fixed;
+        width: 100%;
+        margin-top: -9%;
+        right: 0;
+        padding-right: 3%;
+        overflow-y: auto;
+        overflow-x: hidden; 
+        max-height: 100px;
+        font-size: 24px;
+        color: #495057;
+        
+    }
+    .botonCopiar{
+    
+        display: flex;    
+        width: 100%;
+        height: 60%;
+        position: fixed;
+        top: 65%;
+        left: 50%;
+        transform: translateX(-50%);
+    
+    }
+    .footer{
+        left: 53%;
+    }
+
+}
