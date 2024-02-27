@@ -467,11 +467,6 @@ button.desencriptar:not([disabled]) {
         height: 550px; 
         
     }
-    .botones {
-       
-        
-    
-    }
     .encriptar{
         display: flex;
         position: fixed;
