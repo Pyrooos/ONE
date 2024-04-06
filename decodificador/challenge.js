@@ -1,7 +1,7 @@
 function ajustarEstilos() {
     var textoInput = document.getElementById('texto');
     var areaDerechaTexto = document.querySelector('.areaDerechaTexto');
-    
+    var inputPadron = document.querySelector('.inputPadron');
     var simboloLeyenda=document.querySelector('.simboloLeyenda');
     var botones = document.querySelector('.botones');
     var imagenNoTexto = document.getElementById('imagenNoTexto');
@@ -71,24 +71,27 @@ function ajustarEstilos() {
     if (window.innerWidth <= 375 &  textoInput.value.trim()!== '') {
         
         imagenNoTexto.style.display = 'none';
+        textoInput.style.maxHeight = '25%';
+        
+        simboloLeyenda.style.marginTop = '58%';
+        
+        
+        encriptar.style.top= '47%';
+        desencriptar.style.top= '56%';
+        
+        
+        
 
-        textoInput.style.maxHeight = '80%';
-        simboloLeyenda.style.marginTop = '54%';
-        
-        encriptar.style.top= '45%';
-        desencriptar.style.top= '54%';
-    
+        areaDerechaTexto.style.maxHeight = '42%'; 
+        areaDerechaTexto.style.top = '77%';
         
         
+        mensajeOutput.style.top = '15%';
 
-        areaDerechaTexto.style.height = '33%'; 
-        areaDerechaTexto.style.top = '81%';
-        areaDerechaTexto.style.maxHeight ='25%';
+        mensajeOutput.style.maxWidth = '87%';
+        mensajeOutput.style.maxHeight ='60%';
+        mensajeOutput.style.left = '2%';
         
-        mensajeOutput.style.top = '31%';
-        mensajeOutput.style.right = '1%';
-        mensajeOutput.style.width = '93%';
-        mensajeOutput.style.maxHeight ='40%';
         
         botonCopiar.style.top = '73%'
         botonCopiar.style.height = '21%'
